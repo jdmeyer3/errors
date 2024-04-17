@@ -17,9 +17,9 @@ package contexttags
 import (
 	"context"
 
-	"github.com/cockroachdb/errors/errbase"
 	"github.com/cockroachdb/logtags"
 	"github.com/cockroachdb/redact"
+	"github.com/jdmeyer3/errors/errbase"
 )
 
 // WithContextTags captures the k/v pairs stored in the context via the

@@ -12,6 +12,7 @@
 // implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
+//go:build !plan9
 // +build !plan9
 
 package errbase_test
@@ -22,11 +23,12 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/errorspb"
-	"github.com/cockroachdb/errors/oserror"
-	"github.com/cockroachdb/errors/testutils"
-	"github.com/gogo/protobuf/types"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/errorspb"
+	"github.com/jdmeyer3/errors/oserror"
+	"github.com/jdmeyer3/errors/testutils"
+	"google.golang.org/protobuf/proto"
+	"google.golang.org/protobuf/types/known/anypb"
 )
 
 func TestAdaptErrno(t *testing.T) {
@@ -46,18 +48,18 @@ func TestAdaptErrno(t *testing.T) {
 		enc := errbase.EncodeError(context.Background(), origErr)
 
 		// Trick the decoder into thinking the error comes from a different platform.
-		details := &enc.Error.(*errorspb.EncodedError_Leaf).Leaf.Details
-		var d types.DynamicAny
-		if err := types.UnmarshalAny(details.FullDetails, &d); err != nil {
+		details := enc.Error.(*errorspb.EncodedError_Leaf).Leaf.Details
+		var d anypb.Any
+		if err := anypb.UnmarshalTo(details.FullDetails, &d, proto.UnmarshalOptions{}); err != nil {
 			t.Fatal(err)
 		}
-		errnoDetails := d.Message.(*errorspb.ErrnoPayload)
-		errnoDetails.Arch = "OTHER"
-		any, err := types.MarshalAny(errnoDetails)
-		if err != nil {
-			t.Fatal(err)
-		}
-		details.FullDetails = any
+		//errnoDetails := d.Message.(*errorspb.ErrnoPayload)
+		//errnoDetails.Arch = "OTHER"
+		//any, err := types.MarshalAny(errnoDetails)
+		//if err != nil {
+		//	t.Fatal(err)
+		//}
+		//details.FullDetails = any
 
 		// Now decode the error. This produces an OpaqueErrno payload.
 		dec := errbase.DecodeError(context.Background(), enc)

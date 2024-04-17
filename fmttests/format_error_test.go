@@ -24,12 +24,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/errutil"
-	"github.com/cockroachdb/errors/testutils"
 	"github.com/cockroachdb/redact"
-	"github.com/gogo/protobuf/proto"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/errutil"
+	"github.com/jdmeyer3/errors/testutils"
 	pkgErr "github.com/pkg/errors"
+	"google.golang.org/protobuf/proto"
 )
 
 func TestFormatViaRedact(t *testing.T) {
@@ -247,7 +247,7 @@ waa: woo
   | multi-line wrapper payload
 Wraps: (2)
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.TestFormat
+  | github.com/jdmeyer3/errors/fmttests.TestFormat
   | <tab><path>:<lineno>
   | testing.tRunner
   | <tab><path>:<lineno>
@@ -268,7 +268,7 @@ prefix: woo
   | wrapper payload
 Wraps: (2)
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.TestFormat
+  | github.com/jdmeyer3/errors/fmttests.TestFormat
   | <tab><path>:<lineno>
   | testing.tRunner
   | <tab><path>:<lineno>
@@ -287,7 +287,7 @@ woo
 (1)
 Wraps: (2)
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.TestFormat
+  | github.com/jdmeyer3/errors/fmttests.TestFormat
   | <tab><path>:<lineno>
   | testing.tRunner
   | <tab><path>:<lineno>
@@ -306,7 +306,7 @@ woo
 (1)
 Wraps: (2)
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.TestFormat
+  | github.com/jdmeyer3/errors/fmttests.TestFormat
   | <tab><path>:<lineno>
   | testing.tRunner
   | <tab><path>:<lineno>
@@ -410,7 +410,7 @@ var libref = regexp.MustCompile(
 		`|` +
 		// Any path containing the error library:
 		`(/[a-zA-Z0-9\._/@-]+)+` +
-		`/github.com/cockroachdb/errors` +
+		`/github.com/jdmeyer3/errors` +
 		`)` +
 		// Followed by some directory components:
 		`(/[a-zA-Z0-9\._/@-]+)*` +

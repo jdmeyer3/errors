@@ -20,8 +20,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/testutils"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/testutils"
 	pkgErr "github.com/pkg/errors"
 )
 
@@ -81,15 +81,15 @@ func TestSimplifyStacks(t *testing.T) {
 		tt.CheckStringEqual(spv, `hello world
 (1)
   -- stack trace:
-  | github.com/cockroachdb/errors/errbase_test.TestSimplifyStacks.func2
+  | github.com/jdmeyer3/errors/errbase_test.TestSimplifyStacks.func2
   | <tab><path>:<lineno>
   | [...repeated from below...]
 Wraps: (2) hello world
-  | github.com/cockroachdb/errors/errbase_test.TestSimplifyStacks.func1
+  | github.com/jdmeyer3/errors/errbase_test.TestSimplifyStacks.func1
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/errbase_test.TestSimplifyStacks.func2
+  | github.com/jdmeyer3/errors/errbase_test.TestSimplifyStacks.func2
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/errbase_test.TestSimplifyStacks
+  | github.com/jdmeyer3/errors/errbase_test.TestSimplifyStacks
   | <tab><path>:<lineno>
   | testing.tRunner
   | <tab><path>:<lineno>

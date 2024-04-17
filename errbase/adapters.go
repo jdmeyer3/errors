@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cockroachdb/errors/errorspb"
-	"github.com/gogo/protobuf/proto"
+	"github.com/jdmeyer3/errors/errorspb"
 	pkgErr "github.com/pkg/errors"
+	"google.golang.org/protobuf/proto"
 )
 
 // This file provides the library the ability to encode/decode

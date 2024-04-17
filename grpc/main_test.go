@@ -8,8 +8,8 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/cockroachdb/errors/grpc/middleware"
 	"github.com/hydrogen18/memlistener"
+	"github.com/jdmeyer3/errors/grpc/middleware"
 )
 
 var (

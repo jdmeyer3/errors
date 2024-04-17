@@ -14,7 +14,7 @@
 
 package errors
 
-import "github.com/cockroachdb/errors/hintdetail"
+import "github.com/jdmeyer3/errors/hintdetail"
 
 // ErrorHinter is implemented by types that can provide
 // user-informing detail strings. This is implemented by withHint

@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/cockroachdb/errors/errbase"
+	"github.com/jdmeyer3/errors/errbase"
 )
 
 // stack represents a stack of program counters.

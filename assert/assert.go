@@ -18,10 +18,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/markers"
-	"github.com/cockroachdb/errors/stdstrings"
-	"github.com/gogo/protobuf/proto"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/markers"
+	"github.com/jdmeyer3/errors/stdstrings"
+	"google.golang.org/protobuf/proto"
 )
 
 // WithAssertionFailure decorates the error with an assertion failure marker.

@@ -14,7 +14,7 @@
 
 package errors
 
-import "github.com/cockroachdb/errors/barriers"
+import "github.com/jdmeyer3/errors/barriers"
 
 // Handled swallows the provided error and hides it from the
 // Cause()/Unwrap() interface, and thus the Is() facility that

@@ -18,7 +18,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/errors/errbase"
+	"github.com/jdmeyer3/errors/errbase"
 )
 
 // UnwrapOnce accesses the direct cause of the error if any, otherwise
@@ -37,10 +37,10 @@ func UnwrapAll(err error) error { return errbase.UnwrapAll(err) }
 type EncodedError = errbase.EncodedError
 
 // EncodeError encodes an error.
-func EncodeError(ctx context.Context, err error) EncodedError { return errbase.EncodeError(ctx, err) }
+func EncodeError(ctx context.Context, err error) *EncodedError { return errbase.EncodeError(ctx, err) }
 
 // DecodeError decodes an error.
-func DecodeError(ctx context.Context, enc EncodedError) error { return errbase.DecodeError(ctx, enc) }
+func DecodeError(ctx context.Context, enc *EncodedError) error { return errbase.DecodeError(ctx, enc) }
 
 // SafeDetailer is an interface that can be implemented by errors that
 // can provide PII-free additional strings suitable for reporting or

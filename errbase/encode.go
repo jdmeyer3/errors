@@ -20,16 +20,16 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/cockroachdb/errors/errorspb"
-	"github.com/gogo/protobuf/proto"
-	"github.com/gogo/protobuf/types"
+	"github.com/jdmeyer3/errors/errorspb"
+	"google.golang.org/protobuf/proto"
+	"google.golang.org/protobuf/types/known/anypb"
 )
 
 // EncodedError is the type of an encoded (and protobuf-encodable) error.
 type EncodedError = errorspb.EncodedError
 
 // EncodeError encodes an error.
-func EncodeError(ctx context.Context, err error) EncodedError {
+func EncodeError(ctx context.Context, err error) *EncodedError {
 	if cause := UnwrapOnce(err); cause != nil {
 		return encodeWrapper(ctx, err, cause)
 	}
@@ -41,9 +41,9 @@ func EncodeError(ctx context.Context, err error) EncodedError {
 // protobuf. This was done to enable backwards compatibility when
 // introducing this functionality since the Wrapper type already has a
 // required single `cause` field.
-func encodeLeaf(ctx context.Context, err error, causes []error) EncodedError {
+func encodeLeaf(ctx context.Context, err error, causes []error) *EncodedError {
 	var msg string
-	var details errorspb.EncodedErrorDetails
+	var details *errorspb.EncodedErrorDetails
 
 	if e, ok := err.(*opaqueLeaf); ok {
 		msg = e.msg
@@ -85,11 +85,11 @@ func encodeLeaf(ctx context.Context, err error, causes []error) EncodedError {
 		cs = make([]*EncodedError, len(causes))
 		for i, ee := range causes {
 			ee := EncodeError(ctx, ee)
-			cs[i] = &ee
+			cs[i] = ee
 		}
 	}
 
-	return EncodedError{
+	return &EncodedError{
 		Error: &errorspb.EncodedError_Leaf{
 			Leaf: &errorspb.EncodedErrorLeaf{
 				Message:          msg,
@@ -111,26 +111,25 @@ func SetWarningFn(fn func(context.Context, string, ...interface{})) {
 	warningFn = fn
 }
 
-func encodeAsAny(ctx context.Context, err error, payload proto.Message) *types.Any {
+func encodeAsAny(ctx context.Context, err error, payload proto.Message) *anypb.Any {
 	if payload == nil {
 		return nil
 	}
 
-	any, marshalErr := types.MarshalAny(payload)
-	if marshalErr != nil {
+	value, err := proto.Marshal(payload)
+	if err != nil {
 		warningFn(ctx,
 			"error %+v (%T) announces proto message, but marshaling fails: %+v",
-			err, err, marshalErr)
+			err, err, err)
 		return nil
 	}
-
-	return any
+	return &anypb.Any{TypeUrl: string("type.googleapis.com/" + proto.MessageName(payload)), Value: value}
 }
 
 // encodeWrapper encodes an error wrapper.
-func encodeWrapper(ctx context.Context, err, cause error) EncodedError {
+func encodeWrapper(ctx context.Context, err, cause error) *EncodedError {
 	var msg string
-	var details errorspb.EncodedErrorDetails
+	var details *errorspb.EncodedErrorDetails
 	messageType := Prefix
 
 	if e, ok := err.(*opaqueWrapper); ok {
@@ -169,7 +168,7 @@ func encodeWrapper(ctx context.Context, err, cause error) EncodedError {
 		details.FullDetails = encodeAsAny(ctx, err, payload)
 	}
 
-	return EncodedError{
+	return &EncodedError{
 		Error: &errorspb.EncodedError_Wrapper{
 			Wrapper: &errorspb.EncodedWrapper{
 				Cause:       EncodeError(ctx, cause),
@@ -300,9 +299,9 @@ func GetTypeKey(err error) TypeKey {
 
 // GetTypeMark retrieves the ErrorTypeMark for a given error object.
 // This is meant for use in the markers sub-package.
-func GetTypeMark(err error) errorspb.ErrorTypeMark {
+func GetTypeMark(err error) *errorspb.ErrorTypeMark {
 	_, familyName, extension := getTypeDetails(err, false /*onlyFamily*/)
-	return errorspb.ErrorTypeMark{FamilyName: familyName, Extension: extension}
+	return &errorspb.ErrorTypeMark{FamilyName: familyName, Extension: extension}
 }
 
 // RegisterLeafEncoder can be used to register new leaf error types to

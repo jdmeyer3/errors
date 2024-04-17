@@ -14,7 +14,7 @@
 
 package errors
 
-import "github.com/cockroachdb/errors/domains"
+import "github.com/jdmeyer3/errors/domains"
 
 // Domain is the type of a domain annotation.
 type Domain = domains.Domain

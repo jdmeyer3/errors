@@ -15,9 +15,9 @@
 package errors
 
 import (
-	"github.com/cockroachdb/errors/barriers"
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/errutil"
+	"github.com/jdmeyer3/errors/barriers"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/errutil"
 )
 
 // New creates an error with a simple error message.

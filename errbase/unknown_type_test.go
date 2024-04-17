@@ -22,11 +22,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/errbase/internal"
-	"github.com/cockroachdb/errors/testutils"
-	"github.com/gogo/protobuf/proto"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/errbase/internal"
+	"github.com/jdmeyer3/errors/testutils"
 	"github.com/kr/pretty"
+	"google.golang.org/protobuf/proto"
 )
 
 // These tests demonstrate how the library makes a best effort at

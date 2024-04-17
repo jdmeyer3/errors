@@ -20,8 +20,8 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/cockroachdb/errors/barriers"
-	"github.com/cockroachdb/errors/errbase"
+	"github.com/jdmeyer3/errors/barriers"
+	"github.com/jdmeyer3/errors/errbase"
 )
 
 // Domain is the type of a domain annotation.

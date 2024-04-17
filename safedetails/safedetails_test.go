@@ -22,12 +22,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/errors/errbase"
-	_ "github.com/cockroachdb/errors/errutil"
-	"github.com/cockroachdb/errors/markers"
-	"github.com/cockroachdb/errors/safedetails"
-	"github.com/cockroachdb/errors/testutils"
 	"github.com/cockroachdb/redact"
+	"github.com/jdmeyer3/errors/errbase"
+	_ "github.com/jdmeyer3/errors/errutil"
+	"github.com/jdmeyer3/errors/markers"
+	"github.com/jdmeyer3/errors/safedetails"
+	"github.com/jdmeyer3/errors/testutils"
 )
 
 func TestDetailCapture(t *testing.T) {

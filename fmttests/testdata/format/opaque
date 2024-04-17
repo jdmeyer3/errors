@@ -5,8 +5,8 @@ opaque
 &errbase.opaqueLeaf{
     msg:     "inner\ninner2ndline",
     details: errorspb.EncodedErrorDetails{
-        OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+        OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
         ReportablePayload: nil,
         FullDetails:       (*types.Any)(nil),
     },
@@ -18,8 +18,8 @@ opaque
 &errbase.opaqueLeaf{
     msg:     "inner\ninner2ndline",
     details: errorspb.EncodedErrorDetails{
-        OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+        OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
         ReportablePayload: nil,
         FullDetails:       (*types.Any)(nil),
     },
@@ -38,7 +38,7 @@ inner
   | inner2ndline
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueLeaf
 == %#v via Formattable() = %#v, good
 == %v via Formattable() = Error(), good
@@ -62,7 +62,7 @@ Error types: (1) *errbase.opaqueLeaf
   | ‹inner2ndline›
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueLeaf
 =====
 ===== Sentry reporting
@@ -73,12 +73,12 @@ Error types: (1) *errbase.opaqueLeaf
   | ×
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueLeaf
 -- report composition:
 *fmttests.errNoFmt
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errNoFmt"
 Title: "×"
@@ -93,8 +93,8 @@ fmt outer outer2ndline
     cause: &errbase.opaqueLeaf{
         msg:     "inner\ninner2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
@@ -109,8 +109,8 @@ fmt outer outer2ndline
     cause: &errbase.opaqueLeaf{
         msg:     "inner\ninner2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
@@ -137,7 +137,7 @@ Wraps: (2) inner
   | inner2ndline
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueLeaf
 == %#v via Formattable() = %#v, good
 == %v via Formattable() = Error(), good
@@ -167,7 +167,7 @@ Wraps: (2) ‹inner›
   | ‹inner2ndline›
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueLeaf
 =====
 ===== Sentry reporting
@@ -183,14 +183,14 @@ Wraps: (2) ×
   | ×
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueLeaf
 -- report composition:
 *fmttests.errNoFmt
 *fmttests.werrFmt
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.werrFmt (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errNoFmt"
 Title: "×: ×"
@@ -205,16 +205,16 @@ opaque
     cause: &errbase.opaqueLeaf{
         msg:     "inner\ninner2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
     },
     prefix:  "outer\nouter2ndline",
     details: errorspb.EncodedErrorDetails{
-        OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+        OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
         ReportablePayload: nil,
         FullDetails:       (*types.Any)(nil),
     },
@@ -228,16 +228,16 @@ opaque
     cause: &errbase.opaqueLeaf{
         msg:     "inner\ninner2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
     },
     prefix:  "outer\nouter2ndline",
     details: errorspb.EncodedErrorDetails{
-        OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+        OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
         ReportablePayload: nil,
         FullDetails:       (*types.Any)(nil),
     },
@@ -258,12 +258,12 @@ outer: inner
   | outer2ndline
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (2) inner
   | inner2ndline
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
 == %#v via Formattable() = %#v, good
 == %v via Formattable() = Error(), good
@@ -288,12 +288,12 @@ Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
   | ‹outer2ndline›
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (2) ‹inner›
   | ‹inner2ndline›
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
 =====
 ===== Sentry reporting
@@ -304,19 +304,19 @@ Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
   | ×
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (2) ×
   | ×
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
 -- report composition:
 *fmttests.errNoFmt
 *fmttests.werrNoFmt
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errNoFmt"
 Title: "×: ×"
@@ -333,16 +333,16 @@ fmt outer outer2ndline
         cause: &errbase.opaqueLeaf{
             msg:     "inner\ninner2ndline",
             details: errorspb.EncodedErrorDetails{
-                OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+                OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
                 ReportablePayload: nil,
                 FullDetails:       (*types.Any)(nil),
             },
         },
         prefix:  "middle\nmiddle2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
@@ -359,16 +359,16 @@ fmt outer outer2ndline
         cause: &errbase.opaqueLeaf{
             msg:     "inner\ninner2ndline",
             details: errorspb.EncodedErrorDetails{
-                OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+                OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
                 ReportablePayload: nil,
                 FullDetails:       (*types.Any)(nil),
             },
         },
         prefix:  "middle\nmiddle2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
@@ -397,12 +397,12 @@ Wraps: (2) middle
   | middle2ndline
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (3) inner
   | inner2ndline
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
 == %#v via Formattable() = %#v, good
 == %v via Formattable() = Error(), good
@@ -433,12 +433,12 @@ Wraps: (2) ‹middle›
   | ‹middle2ndline›
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (3) ‹inner›
   | ‹inner2ndline›
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
 =====
 ===== Sentry reporting
@@ -454,21 +454,21 @@ Wraps: (2) ×
   | ×
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (3) ×
   | ×
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
 -- report composition:
 *fmttests.errNoFmt
 *fmttests.werrNoFmt
 *fmttests.werrFmt
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.werrFmt (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errNoFmt"
 Title: "×: ×: ×"
@@ -485,16 +485,16 @@ opaque
         cause: &errbase.opaqueLeaf{
             msg:     "inner\ninner2ndline",
             details: errorspb.EncodedErrorDetails{
-                OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+                OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
                 ReportablePayload: nil,
                 FullDetails:       (*types.Any)(nil),
             },
         },
         prefix:  "middle\nmiddle2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
@@ -502,8 +502,8 @@ opaque
     },
     prefix:  "outer\nouter2ndline",
     details: errorspb.EncodedErrorDetails{
-        OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+        OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
         ReportablePayload: nil,
         FullDetails:       (*types.Any)(nil),
     },
@@ -518,16 +518,16 @@ opaque
         cause: &errbase.opaqueLeaf{
             msg:     "inner\ninner2ndline",
             details: errorspb.EncodedErrorDetails{
-                OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+                OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
                 ReportablePayload: nil,
                 FullDetails:       (*types.Any)(nil),
             },
         },
         prefix:  "middle\nmiddle2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
@@ -535,8 +535,8 @@ opaque
     },
     prefix:  "outer\nouter2ndline",
     details: errorspb.EncodedErrorDetails{
-        OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+        OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+        ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
         ReportablePayload: nil,
         FullDetails:       (*types.Any)(nil),
     },
@@ -558,17 +558,17 @@ outer: middle: inner
   | outer2ndline
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (2) middle
   | middle2ndline
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (3) inner
   | inner2ndline
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
 == %#v via Formattable() = %#v, good
 == %v via Formattable() = Error(), good
@@ -594,17 +594,17 @@ Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueWrapper (3) *errbase.
   | ‹outer2ndline›
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (2) ‹middle›
   | ‹middle2ndline›
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (3) ‹inner›
   | ‹inner2ndline›
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
 =====
 ===== Sentry reporting
@@ -615,26 +615,26 @@ Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueWrapper (3) *errbase.
   | ×
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (2) ×
   | ×
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (3) ×
   | ×
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
 -- report composition:
 *fmttests.errNoFmt
 *fmttests.werrNoFmt
 *fmttests.werrNoFmt
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errNoFmt"
 Title: "×: ×: ×"
@@ -653,16 +653,16 @@ fmt extern extern2ndline
             cause: &errbase.opaqueLeaf{
                 msg:     "inner\ninner2ndline",
                 details: errorspb.EncodedErrorDetails{
-                    OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-                    ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+                    OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+                    ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
                     ReportablePayload: nil,
                     FullDetails:       (*types.Any)(nil),
                 },
             },
             prefix:  "middle\nmiddle2ndline",
             details: errorspb.EncodedErrorDetails{
-                OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+                OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
                 ReportablePayload: nil,
                 FullDetails:       (*types.Any)(nil),
             },
@@ -670,8 +670,8 @@ fmt extern extern2ndline
         },
         prefix:  "outer\nouter2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
@@ -689,16 +689,16 @@ fmt extern extern2ndline
             cause: &errbase.opaqueLeaf{
                 msg:     "inner\ninner2ndline",
                 details: errorspb.EncodedErrorDetails{
-                    OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt",
-                    ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt", Extension:""},
+                    OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt",
+                    ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt", Extension:""},
                     ReportablePayload: nil,
                     FullDetails:       (*types.Any)(nil),
                 },
             },
             prefix:  "middle\nmiddle2ndline",
             details: errorspb.EncodedErrorDetails{
-                OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+                OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+                ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
                 ReportablePayload: nil,
                 FullDetails:       (*types.Any)(nil),
             },
@@ -706,8 +706,8 @@ fmt extern extern2ndline
         },
         prefix:  "outer\nouter2ndline",
         details: errorspb.EncodedErrorDetails{
-            OriginalTypeName:  "github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt",
-            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
+            OriginalTypeName:  "github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt",
+            ErrorTypeMark:     errorspb.ErrorTypeMark{FamilyName:"github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt", Extension:""},
             ReportablePayload: nil,
             FullDetails:       (*types.Any)(nil),
         },
@@ -737,17 +737,17 @@ Wraps: (2) outer
   | outer2ndline
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (3) middle
   | middle2ndline
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (4) inner
   | inner2ndline
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueWrapper (4) *errbase.opaqueLeaf
 == %#v via Formattable() = %#v, good
 == %v via Formattable() = Error(), good
@@ -779,17 +779,17 @@ Wraps: (2) ‹outer›
   | ‹outer2ndline›
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (3) ‹middle›
   | ‹middle2ndline›
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (4) ‹inner›
   | ‹inner2ndline›
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueWrapper (4) *errbase.opaqueLeaf
 =====
 ===== Sentry reporting
@@ -805,17 +805,17 @@ Wraps: (2) ×
   | ×
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (3) ×
   | ×
   |
   | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt
 Wraps: (4) ×
   | ×
   |
   | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
+  | type name: github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueWrapper (4) *errbase.opaqueLeaf
 -- report composition:
 *fmttests.errNoFmt
@@ -823,10 +823,10 @@ Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqu
 *fmttests.werrNoFmt
 *fmttests.werrFmt
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.werrNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.werrFmt (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errNoFmt"
 Title: "×: ×: ×: ×"

@@ -14,7 +14,7 @@
 
 package errors
 
-import "github.com/cockroachdb/errors/assert"
+import "github.com/jdmeyer3/errors/assert"
 
 // WithAssertionFailure decorates the error with an assertion failure marker.
 // This is not intended to be used directly (see AssertionFailed() for

@@ -12,6 +12,7 @@
 // implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
+//go:build aix || darwin || dragonfly || freebsd || linux || netbsd || openbsd || solaris
 // +build aix darwin dragonfly freebsd linux netbsd openbsd solaris
 
 package oserror
@@ -20,8 +21,8 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/cockroachdb/errors"
-	"github.com/cockroachdb/errors/testutils"
+	"github.com/jdmeyer3/errors"
+	"github.com/jdmeyer3/errors/testutils"
 )
 
 func TestErrorPredicatesUnix(t *testing.T) {
