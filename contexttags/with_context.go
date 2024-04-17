@@ -79,7 +79,7 @@ func encodeWithContext(_ context.Context, err error) (string, []string, proto.Me
 	w := err.(*withContext)
 	p := &errorspb.TagsPayload{}
 	for _, t := range w.tags.Get() {
-		p.Tags = append(p.Tags, errorspb.TagPayload{Tag: t.Key(), Value: t.ValueStr()})
+		p.Tags = append(p.Tags, &errorspb.TagPayload{Tag: t.Key(), Value: t.ValueStr()})
 	}
 	return "", w.SafeDetails(), p
 }
