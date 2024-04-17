@@ -43,7 +43,9 @@ func EncodeError(ctx context.Context, err error) *EncodedError {
 // required single `cause` field.
 func encodeLeaf(ctx context.Context, err error, causes []error) *EncodedError {
 	var msg string
-	var details *errorspb.EncodedErrorDetails
+	var details = &errorspb.EncodedErrorDetails{
+		ErrorTypeMark: &errorspb.ErrorTypeMark{},
+	}
 
 	if e, ok := err.(*opaqueLeaf); ok {
 		msg = e.msg
@@ -129,7 +131,9 @@ func encodeAsAny(ctx context.Context, err error, payload proto.Message) *anypb.A
 // encodeWrapper encodes an error wrapper.
 func encodeWrapper(ctx context.Context, err, cause error) *EncodedError {
 	var msg string
-	var details *errorspb.EncodedErrorDetails
+	var details = &errorspb.EncodedErrorDetails{
+		ErrorTypeMark: &errorspb.ErrorTypeMark{},
+	}
 	messageType := Prefix
 
 	if e, ok := err.(*opaqueWrapper); ok {

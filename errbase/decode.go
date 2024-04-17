@@ -36,15 +36,9 @@ func decodeLeaf(ctx context.Context, enc *errorspb.EncodedErrorLeaf) error {
 	// In case there is a detailed payload, decode it.
 	var payload proto.Message
 	if enc.Details.FullDetails != nil {
-		var d anypb.Any
-		err := anypb.UnmarshalTo(enc.Details.FullDetails, &d, proto.UnmarshalOptions{})
-		if err != nil {
-			// It's OK if we can't decode. We'll use
-			// the opaque type below.
-			warningFn(ctx, "error while unmarshalling error: %+v", err)
-		} else {
-			payload = &d
-		}
+		var d *anypb.Any
+		d = enc.Details.GetFullDetails()
+		payload = d
 	}
 
 	// Do we have a leaf decoder for this type?
@@ -104,15 +98,9 @@ func decodeWrapper(ctx context.Context, enc *errorspb.EncodedWrapper) error {
 	// In case there is a detailed payload, decode it.
 	var payload proto.Message
 	if enc.Details.FullDetails != nil {
-		var d anypb.Any
-		err := anypb.UnmarshalTo(enc.Details.FullDetails, &d, proto.UnmarshalOptions{})
-		if err != nil {
-			// It's OK if we can't decode. We'll use
-			// the opaque type below.
-			warningFn(ctx, "error while unmarshalling wrapper error: %+v", err)
-		} else {
-			payload = &d
-		}
+		var d *anypb.Any
+		d = enc.Details.GetFullDetails()
+		payload = d
 	}
 
 	// Do we have a wrapper decoder for this?
