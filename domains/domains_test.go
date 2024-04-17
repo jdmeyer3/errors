@@ -20,11 +20,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/errors/domains"
-	"github.com/cockroachdb/errors/domains/internal"
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/markers"
-	"github.com/cockroachdb/errors/testutils"
+	"github.com/jdmeyer3/errors/domains"
+	"github.com/jdmeyer3/errors/domains/internal"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/markers"
+	"github.com/jdmeyer3/errors/testutils"
 	"github.com/kr/pretty"
 	"github.com/pkg/errors"
 )

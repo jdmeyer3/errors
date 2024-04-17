@@ -14,7 +14,7 @@
 
 package telemetrykeys
 
-import "github.com/cockroachdb/errors/errbase"
+import "github.com/jdmeyer3/errors/errbase"
 
 // WithTelemetry annotates err with the given telemetry key(s).
 // The telemetry keys must be PII-free.

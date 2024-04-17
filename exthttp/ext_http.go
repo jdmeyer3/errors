@@ -18,10 +18,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/errors"
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/markers"
-	"github.com/gogo/protobuf/proto"
+	"github.com/jdmeyer3/errors"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/markers"
+	"google.golang.org/protobuf/proto"
 )
 
 // This file demonstrates how to add a wrapper type not otherwise

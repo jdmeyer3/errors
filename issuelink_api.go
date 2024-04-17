@@ -14,7 +14,7 @@
 
 package errors
 
-import "github.com/cockroachdb/errors/issuelink"
+import "github.com/jdmeyer3/errors/issuelink"
 
 // WithIssueLink adds an annotation to a know issue
 // on a web issue tracker.

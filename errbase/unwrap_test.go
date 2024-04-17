@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/testutils"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/testutils"
 	pkgErr "github.com/pkg/errors"
 )
 

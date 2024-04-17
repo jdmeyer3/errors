@@ -18,11 +18,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cockroachdb/errors/domains"
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/withstack"
 	"github.com/cockroachdb/redact"
 	sentry "github.com/getsentry/sentry-go"
+	"github.com/jdmeyer3/errors/domains"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/withstack"
 )
 
 // BuildSentryReport builds the components of a sentry report.  This

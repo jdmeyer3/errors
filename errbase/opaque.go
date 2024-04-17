@@ -17,8 +17,8 @@ package errbase
 import (
 	"fmt"
 
-	"github.com/cockroachdb/errors/errorspb"
 	"github.com/cockroachdb/redact"
+	"github.com/jdmeyer3/errors/errorspb"
 )
 
 // opaqueLeaf is used when receiving an unknown leaf type.
@@ -27,7 +27,7 @@ import (
 // the type, the original object can be restored.
 type opaqueLeaf struct {
 	msg     string
-	details errorspb.EncodedErrorDetails
+	details *errorspb.EncodedErrorDetails
 }
 
 // opaqueLeafCauses is used when receiving an unknown multi-cause
@@ -61,7 +61,7 @@ var _ SafeFormatter = (*opaqueLeafCauses)(nil)
 type opaqueWrapper struct {
 	cause       error
 	prefix      string
-	details     errorspb.EncodedErrorDetails
+	details     *errorspb.EncodedErrorDetails
 	messageType MessageType
 }
 

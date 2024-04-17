@@ -15,8 +15,8 @@
 package errors
 
 import (
-	"github.com/cockroachdb/errors/safedetails"
 	"github.com/cockroachdb/redact"
+	"github.com/jdmeyer3/errors/safedetails"
 )
 
 // WithSafeDetails annotates an error with the given reportable details.

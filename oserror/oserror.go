@@ -17,8 +17,8 @@ package oserror
 import (
 	"os"
 
-	"github.com/cockroachdb/errors"
-	"github.com/cockroachdb/errors/errbase"
+	"github.com/jdmeyer3/errors"
+	"github.com/jdmeyer3/errors/errbase"
 )
 
 // Portable analogs of some common system call errors.

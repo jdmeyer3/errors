@@ -22,10 +22,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/markers"
-	"github.com/cockroachdb/errors/telemetrykeys"
-	"github.com/cockroachdb/errors/testutils"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/markers"
+	"github.com/jdmeyer3/errors/telemetrykeys"
+	"github.com/jdmeyer3/errors/testutils"
 	"github.com/pkg/errors"
 )
 

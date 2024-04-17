@@ -18,11 +18,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/errorspb"
 	"github.com/cockroachdb/logtags"
 	"github.com/cockroachdb/redact"
-	"github.com/gogo/protobuf/proto"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/errorspb"
+	"google.golang.org/protobuf/proto"
 )
 
 type withContext struct {
@@ -79,7 +79,7 @@ func encodeWithContext(_ context.Context, err error) (string, []string, proto.Me
 	w := err.(*withContext)
 	p := &errorspb.TagsPayload{}
 	for _, t := range w.tags.Get() {
-		p.Tags = append(p.Tags, errorspb.TagPayload{Tag: t.Key(), Value: t.ValueStr()})
+		p.Tags = append(p.Tags, &errorspb.TagPayload{Tag: t.Key(), Value: t.ValueStr()})
 	}
 	return "", w.SafeDetails(), p
 }

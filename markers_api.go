@@ -14,7 +14,7 @@
 
 package errors
 
-import "github.com/cockroachdb/errors/markers"
+import "github.com/jdmeyer3/errors/markers"
 
 // Is determines whether one of the causes of the given error or any
 // of its causes is equivalent to some reference error.

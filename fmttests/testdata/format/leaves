@@ -32,9 +32,9 @@ assertmsg oneline
 (1) assertion failure
 Wraps: (2) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -46,7 +46,7 @@ Wraps: (2) attached stack trace
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -80,9 +80,9 @@ assertmsg ‹oneline›
 (1) assertion failure
 Wraps: (2) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -94,7 +94,7 @@ Wraps: (2) attached stack trace
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -115,9 +115,9 @@ Error types: (1) *assert.withAssertionFailure (2) *withstack.withStack (3) *erru
 (1) assertion failure
 Wraps: (2) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -129,7 +129,7 @@ Wraps: (2) attached stack trace
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -147,9 +147,9 @@ Error types: (1) *assert.withAssertionFailure (2) *withstack.withStack (3) *erru
 <path>:<lineno>: *withstack.withStack (top exception)
 *assert.withAssertionFailure
 == Extra "error types"
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/assert/*assert.withAssertionFailure (*::)
+github.com/jdmeyer3/errors/errutil/*errutil.leafError (*::)
+github.com/jdmeyer3/errors/withstack/*withstack.withStack (*::)
+github.com/jdmeyer3/errors/assert/*assert.withAssertionFailure (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "<path>:<lineno> ...funcNN...
 Title: "*errutil.leafError: assertmsg ×\nvia *withstack.withStack"
@@ -162,7 +162,7 @@ Title: "*errutil.leafError: assertmsg ×\nvia *withstack.withStack"
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven) Walk()
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
+   (github.com/jdmeyer3/errors/fmttests.TestDatadriven)...funcNN...
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven) RunTest()
 <path>:<lineno>:
@@ -174,9 +174,9 @@ Title: "*errutil.leafError: assertmsg ×\nvia *withstack.withStack"
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven.runDirective)...funcNN...
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
+   (github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2) 1()
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.glob.)...funcNN...
+   (github.com/jdmeyer3/errors/fmttests.glob.)...funcNN...
 
 run
 ctx-canceled oneline twoline
@@ -355,7 +355,7 @@ Error types: (1) *fmttests.errFmt
 -- report composition:
 *fmttests.errFmt
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errFmt (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errFmt"
 Title: "×"
@@ -426,7 +426,7 @@ Error types: (1) *fmttests.errFmto
 -- report composition:
 *fmttests.errFmto
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errFmto (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errFmto (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errFmto"
 Title: "×"
@@ -497,7 +497,7 @@ Error types: (1) *fmttests.errFmtoDelegate
 -- report composition:
 *fmttests.errFmtoDelegate
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errFmtoDelegate (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errFmtoDelegate (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errFmtoDelegate"
 Title: "×"
@@ -559,7 +559,7 @@ Error types: (1) *fmttests.errFmtp
 -- report composition:
 *fmttests.errFmtp
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errFmtp (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errFmtp (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errFmtp"
 Title: "×"
@@ -659,9 +659,9 @@ twoline
 new-style oneline
 (1) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -673,7 +673,7 @@ new-style oneline
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -706,9 +706,9 @@ new-style ‹oneline›
 new-style ‹oneline›
 (1) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -720,7 +720,7 @@ new-style ‹oneline›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -740,9 +740,9 @@ Error types: (1) *withstack.withStack (2) *errutil.leafError
 <path>:<lineno>: new-style ×
 (1) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -754,7 +754,7 @@ Error types: (1) *withstack.withStack (2) *errutil.leafError
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -771,8 +771,8 @@ Error types: (1) *withstack.withStack (2) *errutil.leafError
 *errutil.leafError: new-style ×
 <path>:<lineno>: *withstack.withStack (top exception)
 == Extra "error types"
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
+github.com/jdmeyer3/errors/errutil/*errutil.leafError (*::)
+github.com/jdmeyer3/errors/withstack/*withstack.withStack (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "<path>:<lineno> ...funcNN...
 Title: "*errutil.leafError: new-style ×\nvia *withstack.withStack"
@@ -785,7 +785,7 @@ Title: "*errutil.leafError: new-style ×\nvia *withstack.withStack"
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven) Walk()
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
+   (github.com/jdmeyer3/errors/fmttests.TestDatadriven)...funcNN...
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven) RunTest()
 <path>:<lineno>:
@@ -797,9 +797,9 @@ Title: "*errutil.leafError: new-style ×\nvia *withstack.withStack"
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven.runDirective)...funcNN...
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
+   (github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2) 1()
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.glob.)...funcNN...
+   (github.com/jdmeyer3/errors/fmttests.glob.)...funcNN...
 
 run
 newf-attached oneline twoline
@@ -842,9 +842,9 @@ twoline: payload
 new-style oneline
 (1) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -856,7 +856,7 @@ new-style oneline
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -870,9 +870,9 @@ Wraps: (2) secondary error attachment
   | payload
   | (1) attached stack trace
   |   -- stack trace:
-  |   | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  |   | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  |   | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.runDirective.func1
   |   | <tab><path>:<lineno>
@@ -884,7 +884,7 @@ Wraps: (2) secondary error attachment
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.RunTest
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  |   | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.Walk
   |   | <tab><path>:<lineno>
@@ -919,9 +919,9 @@ new-style ‹oneline›
 new-style ‹oneline›
 (1) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -933,7 +933,7 @@ new-style ‹oneline›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -947,9 +947,9 @@ Wraps: (2) secondary error attachment
   | payload
   | (1) attached stack trace
   |   -- stack trace:
-  |   | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  |   | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  |   | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.runDirective.func1
   |   | <tab><path>:<lineno>
@@ -961,7 +961,7 @@ Wraps: (2) secondary error attachment
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.RunTest
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  |   | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.Walk
   |   | <tab><path>:<lineno>
@@ -983,9 +983,9 @@ Error types: (1) *withstack.withStack (2) *secondary.withSecondaryError (3) *err
 <path>:<lineno>: new-style ×
 (1) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -997,7 +997,7 @@ Error types: (1) *withstack.withStack (2) *secondary.withSecondaryError (3) *err
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -1011,9 +1011,9 @@ Wraps: (2) secondary error attachment
   | payload
   | (1) attached stack trace
   |   -- stack trace:
-  |   | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  |   | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  |   | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.runDirective.func1
   |   | <tab><path>:<lineno>
@@ -1025,7 +1025,7 @@ Wraps: (2) secondary error attachment
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.RunTest
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  |   | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.Walk
   |   | <tab><path>:<lineno>
@@ -1042,12 +1042,12 @@ Wraps: (3) new-style ×
 Error types: (1) *withstack.withStack (2) *secondary.withSecondaryError (3) *errutil.leafError
 -- report composition:
 *errutil.leafError: new-style ×
-*secondary.withSecondaryError: details for github.com/cockroachdb/errors/withstack/*withstack.withStack:::
+*secondary.withSecondaryError: details for github.com/jdmeyer3/errors/withstack/*withstack.withStack:::
 <path>:<lineno>: *withstack.withStack (top exception)
 == Extra "error types"
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/secondary/*secondary.withSecondaryError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
+github.com/jdmeyer3/errors/errutil/*errutil.leafError (*::)
+github.com/jdmeyer3/errors/secondary/*secondary.withSecondaryError (*::)
+github.com/jdmeyer3/errors/withstack/*withstack.withStack (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "<path>:<lineno> ...funcNN...
 Title: "*errutil.leafError: new-style ×\nvia *withstack.withStack"
@@ -1060,7 +1060,7 @@ Title: "*errutil.leafError: new-style ×\nvia *withstack.withStack"
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven) Walk()
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
+   (github.com/jdmeyer3/errors/fmttests.TestDatadriven)...funcNN...
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven) RunTest()
 <path>:<lineno>:
@@ -1072,9 +1072,9 @@ Title: "*errutil.leafError: new-style ×\nvia *withstack.withStack"
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven.runDirective)...funcNN...
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
+   (github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2) 1()
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.glob.)...funcNN...
+   (github.com/jdmeyer3/errors/fmttests.glob.)...funcNN...
 
 run
 nofmt oneline twoline
@@ -1132,7 +1132,7 @@ Error types: (1) *fmttests.errNoFmt
 -- report composition:
 *fmttests.errNoFmt
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errNoFmt (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errNoFmt"
 Title: "×"
@@ -1450,9 +1450,9 @@ twoline
 == %+v
 oneline
 twoline
-github.com/cockroachdb/errors/fmttests.glob...funcNN...
+github.com/jdmeyer3/errors/fmttests.glob...funcNN...
 <tab><path>:<lineno>
-github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
 <tab><path>:<lineno>
 github.com/cockroachdb/datadriven.runDirective.func1
 <tab><path>:<lineno>
@@ -1464,7 +1464,7 @@ github.com/cockroachdb/datadriven.runTestInternal
 <tab><path>:<lineno>
 github.com/cockroachdb/datadriven.RunTest
 <tab><path>:<lineno>
-github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
 <tab><path>:<lineno>
 github.com/cockroachdb/datadriven.Walk
 <tab><path>:<lineno>
@@ -1487,9 +1487,9 @@ oneline
 (1) oneline
   | twoline
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -1501,7 +1501,7 @@ oneline
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -1528,9 +1528,9 @@ Error types: (1) *errors.fundamental
 (1) ‹oneline›
 ‹  | twoline›
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -1542,7 +1542,7 @@ Error types: (1) *errors.fundamental
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -1561,9 +1561,9 @@ Error types: (1) *errors.fundamental
 (1) ×
 ×
   -- stack trace:
-  | github.com/cockroachdb/errors/fmttests.glob...funcNN...
+  | github.com/jdmeyer3/errors/fmttests.glob...funcNN...
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -1575,7 +1575,7 @@ Error types: (1) *errors.fundamental
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -1602,7 +1602,7 @@ Title: "*errors.fundamental: ×"
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven) Walk()
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
+   (github.com/jdmeyer3/errors/fmttests.TestDatadriven)...funcNN...
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven) RunTest()
 <path>:<lineno>:
@@ -1614,9 +1614,9 @@ Title: "*errors.fundamental: ×"
 <path>:<lineno>:
    (github.com/cockroachdb/datadriven.runDirective)...funcNN...
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
+   (github.com/jdmeyer3/errors/fmttests.TestDatadriven.func2) 1()
 <path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.glob.)...funcNN...
+   (github.com/jdmeyer3/errors/fmttests.glob.)...funcNN...
 
 run
 safefmt oneline twoline
@@ -1674,7 +1674,7 @@ Error types: (1) *fmttests.errSafeFormat
 -- report composition:
 *fmttests.errSafeFormat
 == Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errSafeFormat (*::)
+github.com/jdmeyer3/errors/fmttests/*fmttests.errSafeFormat (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*fmttests.errSafeFormat"
 Title: "safe ×"
@@ -1751,7 +1751,7 @@ Error types: (1) *issuelink.unimplementedError
 -- report composition:
 *issuelink.unimplementedError: https://mysite
 == Extra "error types"
-github.com/cockroachdb/errors/issuelink/*issuelink.unimplementedError (*::)
+github.com/jdmeyer3/errors/issuelink/*issuelink.unimplementedError (*::)
 == Exception 1 (Module: "error domain: <none>")
 Type: "*issuelink.unimplementedError"
 Title: "×"

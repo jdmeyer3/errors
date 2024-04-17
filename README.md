@@ -11,8 +11,8 @@ automatically formats error details and strips them of PII.
 
 See also [the design RFC](https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20190318_error_handling.md).
 
-![Build Status](https://github.com/cockroachdb/errors/actions/workflows/ci.yaml/badge.svg?branch=master)
-[![Go Reference](https://pkg.go.dev/badge/github.com/cockroachdb/errors.svg)](https://pkg.go.dev/github.com/cockroachdb/errors)
+![Build Status](https://github.com/jdmeyer3/errors/actions/workflows/ci.yaml/badge.svg?branch=master)
+[![Go Reference](https://pkg.go.dev/badge/github.com/jdmeyer3/errors.svg)](https://pkg.go.dev/github.com/jdmeyer3/errors)
 
 Table of contents:
 
@@ -541,7 +541,7 @@ Example use:
 ## API (not constructing error objects)
 
 The following is a summary of the non-constructor API functions, grouped by category.
-Detailed documentation can be found at: https://pkg.go.dev/github.com/cockroachdb/errors
+Detailed documentation can be found at: https://pkg.go.dev/github.com/jdmeyer3/errors
 
 ```go
 // Access causes.

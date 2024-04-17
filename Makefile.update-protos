@@ -47,7 +47,7 @@ all: $(PROTOS)
 			-I. \
 			-I$$GOPATH/src/ \
 			-I$$GOPATH/src/github.com \
-			-I$$GOPATH/src/github.com/cockroachdb/errors \
+			-I$$GOPATH/src/github.com/jdmeyer3/errors \
 			-I$$GOPATH/src/github.com/gogo/protobuf \
 			-I$$GOPATH/src/github.com/gogo/protobuf/protobuf \
 			--gogoroach_out=Mgoogle/protobuf/any.proto=github.com/gogo/protobuf/types,plugins=grpc,import_prefix=:. \

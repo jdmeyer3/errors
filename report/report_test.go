@@ -21,13 +21,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/errors/domains"
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/report"
-	"github.com/cockroachdb/errors/safedetails"
-	"github.com/cockroachdb/errors/testutils"
-	"github.com/cockroachdb/errors/withstack"
 	sentry "github.com/getsentry/sentry-go"
+	"github.com/jdmeyer3/errors/domains"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/report"
+	"github.com/jdmeyer3/errors/safedetails"
+	"github.com/jdmeyer3/errors/testutils"
+	"github.com/jdmeyer3/errors/withstack"
 	"github.com/kr/pretty"
 )
 
@@ -100,7 +100,7 @@ report_test.go:\d+: ×
 Wraps: \(2\) error domain: \"thisdomain\"
 Wraps: \(3\) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/report_test.TestReport
+  | github.com/jdmeyer3/errors/report_test.TestReport
   | \t[^:]*report/report_test.go:\d+
   | testing.tRunner
   | \t.*src/testing/testing.go:\d+
@@ -121,10 +121,10 @@ report_test.go:82: *withstack.withStack \(top exception\)
 
 	tt.Run("valid extra details", func(tt testutils.T) {
 		expectedTypes := `errors/*errors.errorString (*::)
-github.com/cockroachdb/errors/safedetails/*safedetails.withSafeDetails (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/domains/*domains.withDomain (*::error domain: "thisdomain")
-github.com/cockroachdb/errors/report_test/*report_test.myWrapper (some/previous/path/prevpkg.prevType::)
+github.com/jdmeyer3/errors/safedetails/*safedetails.withSafeDetails (*::)
+github.com/jdmeyer3/errors/withstack/*withstack.withStack (*::)
+github.com/jdmeyer3/errors/domains/*domains.withDomain (*::error domain: "thisdomain")
+github.com/jdmeyer3/errors/report_test/*report_test.myWrapper (some/previous/path/prevpkg.prevType::)
 `
 		types := fmt.Sprintf("%s", e.Extra["error types"])
 		tt.CheckEqual(types, expectedTypes)

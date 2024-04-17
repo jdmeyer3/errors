@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/errorspb"
 	"github.com/cockroachdb/redact"
-	"github.com/gogo/protobuf/proto"
+	"github.com/jdmeyer3/errors/errbase"
+	"github.com/jdmeyer3/errors/errorspb"
+	"google.golang.org/protobuf/proto"
 )
 
 // leafError is like the basic error string in the stdlib except the
